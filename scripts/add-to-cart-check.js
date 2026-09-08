@@ -1,7 +1,10 @@
+//#region Imports
 import puppeteer from 'puppeteer';
 import { PageActions } from '../pages/page-actions.js';
 import { resetValidationResults } from '../utils/validation-results.js';
+//#endregion
 
+//#region Browser and page setup
 const browser = await puppeteer.launch({
   headless: false,
   args: ['--start-maximized'],
@@ -11,14 +14,18 @@ const browser = await puppeteer.launch({
 const page = await browser.newPage();
 const pageActions = new PageActions(page);
 await resetValidationResults();
+//#endregion
 
+//#region Dialog handling
 page.on('dialog', async (dialog) => {
   if (dialog.type() === 'alert') {
     console.log(`Accepted warning: ${dialog.message()}`);
   }
   await dialog.accept();
 });
+//#endregion
 
+//#region Add-to-cart validation
 try {
   await page.goto('https://www.saucedemo.com/', { waitUntil: 'networkidle2' });
   await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -52,3 +59,4 @@ try {
 } finally {
   await browser.close();
 }
+//#endregion
