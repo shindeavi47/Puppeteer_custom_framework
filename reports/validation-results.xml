@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><VALIDATION_RESULTS>  <VALIDATION>
+    <RESUTL>PASS</RESUTL>
+    <SCENARIO>Adds Sauce Labs Backpack to the cart</SCENARIO>
+    <TIMELAPS>44 ms</TIMELAPS>
+  </VALIDATION>
+  <VALIDATION>
+    <RESUTL>PASS</RESUTL>
+    <SCENARIO>Validates cart badge count</SCENARIO>
+    <TIMELAPS>18 ms</TIMELAPS>
+  </VALIDATION>
+  <VALIDATION>
+    <RESUTL>PASS</RESUTL>
+    <SCENARIO>Opens the shopping cart</SCENARIO>
+    <TIMELAPS>63 ms</TIMELAPS>
+  </VALIDATION>
+  <VALIDATION>
+    <RESUTL>PASS</RESUTL>
+    <SCENARIO>Validates Sauce Labs Backpack in the cart</SCENARIO>
+    <TIMELAPS>21 ms</TIMELAPS>
+  </VALIDATION>
+</VALIDATION_RESULTS>
